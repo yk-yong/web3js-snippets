@@ -2,7 +2,7 @@
     "name": "web3js-snippets",
     "displayName": "Web3js Snippets",
     "description": "Snippets for web3js",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "lemon-berry",
     "engines": {
         "vscode": "^1.19.0"
@@ -18,6 +18,15 @@
             }
         ]
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yikkok-yong/web3js-snippets.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yikkok-yong/web3js-snippets/issues",
+        "email": "johnyong@live.cn"
+    },
+    "homepage": "https://github.com/yikkok-yong/web3js-snippets/",
     "license": "MIT",
     "keywords": ["web3", "snippets"]
 }

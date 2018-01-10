@@ -1,0 +1,23 @@
+{
+    "name": "web3js-snippets",
+    "displayName": "Web3js Snippets",
+    "description": "Snippets for web3js",
+    "version": "0.0.1",
+    "publisher": "lemon-berry",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript-snippets.json"
+            }
+        ]
+    },
+    "license": "MIT",
+    "keywords": ["web3", "snippets"]
+}

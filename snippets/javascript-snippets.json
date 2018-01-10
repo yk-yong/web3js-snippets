@@ -1,0 +1,540 @@
+{
+    "web3": {
+        "prefix": "web3",
+        "body": "web3",
+        "description": "web3 object"
+    },
+    "web3.version.api": {
+        "prefix": "web3.version.api",
+        "body": "web3.version.api",
+        "description": "The ethereum js api version - returns string"
+    },
+    "web3.version.node": {
+        "prefix": "web3.version.node",
+        "body": "web3.version.node",
+        "description": "The client/node version - returns string"
+    },
+    "web3.version.getNode": {
+        "prefix": "web3.version.getNode",
+        "body": [
+            "web3.version.getNode(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "The client/node version"
+    },
+    "web3.version.network": {
+        "prefix": "web3.version.network",
+        "body": "web3.version.network",
+        "description": "The network protocol version - returns string"
+    },
+    "web3.version.getNetwork": {
+        "prefix": "web3.version.getNetwork",
+        "body": [
+            "web3.version.getNetwork(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "The network protocol version"
+    },
+    "web3.version.ethereum": {
+        "prefix": "web3.version.ethereum",
+        "body": "web3.version.ethereum",
+        "description": "The ethereum protocol version - returns string"
+    },
+    "web3.version.whisper": {
+        "prefix": "web3.version.whisper",
+        "body": "web3.version.whisper",
+        "description": "The whisper protocol version - returns string"
+    },
+    "web3.version.getWhisper": {
+        "prefix": "web3.version.getWhisper",
+        "body": [
+            "web3.version.getWhisper(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "The whisper protocol version"
+    },
+    "web3.isConnected": {
+        "prefix": "web3.isConnected",
+        "body": "web3.isConnected()${0:;}",
+        "description": "Check if a connection to a node exists - returns boolean"
+    },
+    "web3.setProvider": {
+        "prefix": "web3.setProvider",
+        "body": "web3.setProvider(${0:new web3.providers.HttpProvider('http://${1:localhost}:${2:8545}')});",
+        "description": "Should be called to set provider - returns undefined"
+    },
+    "web3.currentProvider": {
+        "prefix": "web3.currentProvider",
+        "body": "web3.currentProvider",
+        "description": "Will contain the current provider, if one is set. This can be used to check if mist etc. has set already a provider - returns object"
+    },
+    "web3.reset": {
+        "prefix": "web3.reset",
+        "body": "web3.reset(${0:true});",
+        "description": "Should be called to reset state of web3. Resets everything except manager. Uninstalls all filters. Stops polling - returns undefined"
+    },
+    "web3.sha3": {
+        "prefix": "web3.sha3",
+        "body": "web3.sha3(${0:string}${1:, {${2: encoding: 'hex'}}})",
+        "description": "Hash of string - returns string"
+    },
+    "web3.toHex": {
+        "prefix": "web3.toHex",
+        "body": "web3.toHex(${0:value});",
+        "description": "Converts any value into HEX - returns string"
+    },
+    "web3.toAscii": {
+        "prefix": "web3.toAscii",
+        "body": "web3.toAscii(${0:hexString});",
+        "description": "Converts a HEX string into a ASCII string - returns string"
+    },
+    "web3.fromAscii": {
+        "prefix": "web3.fromAscii",
+        "body": "web3.fromAscii(${0:asciiString}${1:, ${2:numberOfBytes}});",
+        "description": "Converts any ASCII string to a HEX string - returns string"
+    },
+    "web3.toDecimal": {
+        "prefix": "web3.toDecimal",
+        "body": "web3.toDecimal(${0:hexString});",
+        "description": "Converts a HEX string to its number representation - returns string"
+    },
+    "web3.fromDecimal": {
+        "prefix": "web3.fromDecimal",
+        "body": "web3.fromDecimal(${0:number});",
+        "description": "Converts a number or number string to its HEX representation - returns string"
+    },
+    "web3.fromWei": {
+        "prefix": "web3.fromWei",
+        "body": "web3.fromWei(${0:number}, ${1|'kwei','mwei','gwei','szabo','finney','ether','kether','mether','gether','tether'|});",
+        "description": "Converts a number of wei into the following ethereum units - returns string|BigNumber"
+    },
+    "web3.toWei": {
+        "prefix": "web3.toWei",
+        "body": "web3.toWei(${0:number}, ${1|'kwei','mwei','gwei','szabo','finney','ether','kether','mether','gether','tether'|});",
+        "description": "Converts an ethereum unit into wei - returns string|BigNumber"
+    },
+    "web3.toBigNumber": {
+        "prefix": "web3.toBigNumber",
+        "body": "web3.toBigNumber(${0:numberOrHexString});",
+        "description": "Converts a given number into a BigNumber instance - returns BigNumber"
+    },
+    "web3.isAddress": {
+        "prefix": "web3.isAddress",
+        "body": "web3.isAddress(${0:hexString});",
+        "description": "Checks if the given string is an address - returns boolean"
+    },
+    "web3.net.listening": {
+        "prefix": "web3.net.listening",
+        "body": "web3.net.listening",
+        "description": "This property is read only and says whether the node is actively listening for network connections or not - returns boolean"
+    },
+    "web3.net.getListening": {
+        "prefix": "web3.net.getListening",
+        "body": [
+            "web3.version.getListening(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and says whether the node is actively listening for network connections or not"
+    },
+    "web3.net.peerCount": {
+        "prefix": "web3.net.peerCount",
+        "body": "web3.net.peerCount",
+        "description": "This property is read only and returns the number of connected peers - returns boolean"
+    },
+    "web3.net.getPeerCount": {
+        "prefix": "web3.net.getPeerCount",
+        "body": [
+            "web3.version.getPeerCount(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and returns the number of connected peers"
+    },
+    "web3.eth.defaultAccount": {
+        "prefix": "web3.eth.defaultAccount",
+        "body": "web3.eth.defaultAccount",
+        "description": "Get default address - return string, 20 bytes. Default is undefined"
+    },
+    "web3.eth.defaultBlock": {
+        "prefix": "web3.eth.defaultBlock",
+        "body": "web3.eth.defaultBlock",
+        "description": "Get default address - return string|number. Default is 'latest'"
+    },
+    "web3.eth.syncing": {
+        "prefix": "web3.eth.syncing",
+        "body": "web3.eth.syncing",
+        "description": "This property is read only and returns the either a sync object, when the node is syncing or false"
+    },
+    "web3.eth.getSyncing": {
+        "prefix": "web3.eth.getSyncing",
+        "body": [
+            "web3.eth.getSyncing(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and returns the either a sync object, when the node is syncing or false"
+    },
+    "web3.eth.isSyncing": {
+        "prefix": "web3.eth.isSyncing",
+        "body": [
+            "web3.eth.isSyncing(function (error, sync) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This convenience function calls the callback everytime a sync starts, updates and stops"
+    },
+    "web3.eth.coinbase": {
+        "prefix": "web3.eth.coinbase",
+        "body": "web3.eth.coinbase",
+        "description": "This property is read only and returns the coinbase address where the mining rewards go to, returns string"
+    },
+    "web3.eth.getCoinbase": {
+        "prefix": "web3.eth.gethCoinbase",
+        "body": [
+            "web3.eth.getCoinbase(function(error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and returns the coinbase address where the mining rewards go to"
+    },
+    "web3.eth.mining": {
+        "prefix": "web3.eth.mining",
+        "body": "web3.eth.mining",
+        "description": "This property is read only and says whether the node is mining or not - returns boolean"
+    },
+    "web3.eth.getMining": {
+        "prefix":"web3.eth.getMining",
+        "body": [
+            "web3.eth.getMining(function(error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and says whether the node is mining or not"
+    },
+    "web3.eth.hashrate": {
+        "prefix": "web3.eth.hashrate",
+        "body": "web3.eth.hashrate",
+        "description": "This property is read only and returns the number of hashes per second that the node is mining with - returns number"
+    },
+    "web3.eth.getHashrate": {
+        "prefix": "web3.eth.getHashrate",
+        "body": [
+            "web3.eth.getHashrate(function(error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and returns the number of hashes per second that the node is mining with"
+    },
+    "web3.eth.gasPrice": {
+        "prefix": "web3.eth.gasPrice",
+        "body": "web3.eth.gasPrice",
+        "description": "This property is read only and returns the current gas price. The gas price is determined by the x latest blocks median gas price - return BigNumber"
+    },
+    "web3.eth.getGasPrice": {
+        "prefix": "web3.eth.getGasPrice",
+        "body": [
+            "web3.eth.getGasPrice(function(error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and returns the current gas price. The gas price is determined by the x latest blocks median gas price"
+    },
+    "web3.eth.accounts": {
+        "prefix": "web3.eth.accounts",
+        "body": "web3.eth.accounts",
+        "description": "This property is read only and returns a list of accounts the node controls - returns array"
+    },
+    "web3.eth.getAccounts": {
+        "prefix": "web3.eth.getAccounts",
+        "body": [
+            "web3.eth.getAccounts(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and returns a list of accounts the node controls"
+    },
+    "web3.eth.blockNumber": {
+        "prefix": "web3.eth.blockNumber",
+        "body": "web3.eth.blockNumber",
+        "description": "This property is read only and returns the current block number - returns number"
+    },
+    "web3.eth.getBlockNumber": {
+        "prefix": "web3.eth.getBlockNumber",
+        "body": [
+            "web3.eth.getBlockNumber(function (error, result) {",
+            "\t${0}",
+            "});"
+        ],
+        "description": "This property is read only and returns the current block number"
+    },
+    "web3.eth.getBalance": {
+        "prefix": "web3.eth.getBalance",
+        "body": [
+            "web3.eth.getBalance(${1:addressHexString}${2:, ${3|number,'earliest','latest','pending'|}}${4:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Get the balance of an address at a given block - returns BigNumber"
+    },
+    "web3.eth.getStorageAt": {
+        "prefix": "web3.eth.getStorageAt",
+        "body": [
+            "web3.eth.getStorageAt(${1:addressHexString}, ${2:position}${3:, ${4|number,'earliest','latest','pending'|}}${5:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Get the storage at a specific position of an address - returns string"
+    },
+    "web3.eth.getCode": {
+        "prefix": "web3.eth.getCode",
+        "body": [
+            "web3.eth.getCode(${1:addressHexString}${2:, ${3|number,'earliest','latest','pending'|}}${4:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Get the code at a specific address - returns string"
+    },
+    "web3.eth.getBlock": {
+        "prefix": "web3.eth.getBlock",
+        "body": [
+            "web3.eth.getBlock(${1|blockHashOrNum,'earliest', 'latest', 'pending'|}${2:, ${3|true,false|}}${4:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Returns a block matching the block number or block hash - returns object"
+    },
+    "web3.eth.getBlockTransactionCount": {
+        "prefix": "web3.eth.getBlockTransactionCount",
+        "body": [
+            "web3.eth.getBlockTransactionCount(${1|hashOrBlockNum,'earliest','latest','pending'|}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Returns the number of transaction in a given block - returns number"
+    },
+    "web3.eth.getUncle": {
+        "prefix": "web3.eth.getUncle",
+        "body": [
+            "web3.eth.getUncle(${1:blockHashOrNum}, ${2:uncleNumber$}${3:, ${4|true,false|}}${5:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Returns a blocks uncle by a given uncle index position - returns object"
+    },
+    "web3.eth.getTransaction": {
+        "prefix": "web3.eth.getTransaction",
+        "body": [
+            "web3.eth.getTransaction(${1:transactionHash}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Returns a transaction matching the given transaction hash - returns object"
+    },
+    "web3.eth.getTransactionFromBlock": {
+        "prefix": "web3.eth.getTransactionFromBlock",
+        "body": [
+            "web3.eth.getTransactionFromBlock(${1|blockHashOrNum,'earliest','latest','pending'|}, ${2:index}${3:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Returns a transaction based on a block hash or number and the transactions index position - returns object"
+    },
+    "web3.eth.getTransactionReceipt": {
+        "prefix": "web3.eth.getTransactionReceipt",
+        "body": [
+            "web3.eth.getTransactionReceipt(${1:transactionHash}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Returns the receipt of a transaction by transaction hash - return object"
+    },
+    "web3.eth.getTransactionCount": {
+        "prefix": "web3.eth.getTransactionCount",
+        "body": [
+            "web3.eth.getTransactionCount(${1:addressHexString}${2:, ${3|blockNum,'earliest','latest','pending'|}}${4:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Get the numbers of transactions sent from this address - returns number"
+    },
+    "web3.eth.sendTransaction": {
+        "prefix": "web3.eth.sendTransaction",
+        "body": [
+            "web3.eth.sendTransaction(${1:transactionObject}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Sends a transaction to the network - returns string"
+    },
+    "web3.eth.sendRawTransaction": {
+        "prefix": "web3.eth.sendRawTransaction",
+        "body": [
+            "web3.eth.sendRawTransaction(${1:signedTransactionData}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Sends an already signed transaction - return string"
+    },
+    "web3.eth.sign": {
+        "prefix": "web3.eth.sign",
+        "body": [
+            "web3.eth.sign(${1:address}, ${2:dataToSign}${3:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Signs data from a specific account. This account needs to be unlocked - returns string"
+    },
+    "web3.eth.call": {
+        "prefix": "web3.eth.call",
+        "body": [
+            "web3.eth.call(${1:callObject}${2:, ${3|blockNum,'earliest','latest','pending'|}}${3:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Executes a message call transaction, which is directly executed in the VM of the node, but never mined into the blockchain - returns string"
+    },
+    "web3.eth.estimateGas": {
+        "prefix": "web3.eth.estimateGas",
+        "body": [
+            "web3.eth.estimateGas(${1:callObject}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Executes a message call or transaction, which is directly executed in the VM of the node, but never mined into the blockchain and returns the amount of the gas used - return number"
+    },
+    "web3.eth.filter": {
+        "prefix": "web3.eth.filter",
+        "body": [
+            "web3.eth.filter(${1|'latest','pending',{object}|});"
+        ],
+        "description": "To watch for changes - returns object"
+    },
+    "web3.eth.contract": {
+        "prefix": "web3.eth.contract",
+        "body": "web3.eth.contract(${1:abiArray});",
+        "description": "Creates a contract object for a solidity contract, which can be used to initiate contracts on an address"
+    },
+    "web3.eth.getCompilers": {
+        "prefix": "web3.eth.getCompilers",
+        "body": [
+            "web3.eth.getCompilers(${1:function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Gets a list of available compilers - returns array"
+    },
+    "web3.eth.namereg": {
+        "prefix": "web3.eth.namereg",
+        "body": "web3.eth.namereg",
+        "description": "Returns GlobalRegistrar object"
+    },
+    "web3.db.putString": {
+        "prefix": "web3.db.putString",
+        "body": "web3.db.putString(${1:db}, ${2:key}, ${3:value});",
+        "description": "Store a string in the local leveldb database - returns boolean"
+    },
+    "web3.db.getString": {
+        "prefix": "web3.db.getString",
+        "body": "web3.db.getString(${1:db}, ${2:key});",
+        "description": "Get string from the local leveldb database - returns string"
+    },
+    "web3.db.putHex": {
+        "prefix": "web3.db.putHex",
+        "body": "web3.db.putHex(${1:db}, ${2:key}, ${3:value});",
+        "description": "Store binary data in HEX form in the local leveldb database - returns boolean"
+    },
+    "web3.db.getHex": {
+        "prefix": "web3.db.getHex",
+        "body": "web3.db.getHex(${1:db}, ${2:key});",
+        "description": "Get a binary data in HEX form from the local leveldb database - returns string"
+    },
+    "web3.shh.post": {
+        "prefix": "web3.shh.post",
+        "body": [
+            "web3.shh.post(${1:jsonObj}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Post whisper message to the network - returns boolean"
+    },
+    "web3.shh.newIdentity": {
+        "prefix": "web3.shh.newIdentity",
+        "body": [
+            "web3.shh.newIdentity(${1: function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Create new identity - returns string"
+    },
+    "web3.shh.hasIdentity": {
+        "prefix": "web3.shh.hasIdentity",
+        "body": [
+            "web3.shh.hasIdentity(${1:identity}${2:, function(error, result) {",
+            "\t${0}",
+            "}});"
+        ],
+        "description": "Check if user has given identity - returns boolean"
+    },
+    "web3.shh.filter": {
+        "prefix": "web3.shh.filter",
+        "body": "web3.shh.filter($1:jsonObj});",
+        "description": "Watch for incoming whisper messages - return object"
+    },
+    "web3.eth.sendIBANTransaction": {
+        "prefix": "web3.eth.sendIBANTransaction",
+        "body": "web3.eth.sendIBANTransaction(${1:fromAddress}, {2:toIBANAddress}, {3:value});",
+        "description": "Sends IBAN transaction from user account to destination IBAN address"
+    },
+    "web3.eth.iban": {
+        "prefix": "web3.eth.iban",
+        "body": "web3.eth.iban(${1:ibanAddress});"
+    },
+    "web3.eth.iban.fromAddress": {
+        "prefix": "web3.eth.iban.fromAddress",
+        "body": "web3.eth.iban.fromAddress(${1:address});"
+    },
+    "web3.eth.iban.fromBban": {
+        "prefix": "web3.eth.iban.fromBban",
+        "body": "web3.eth.iban.fromBban(${1:BbanAddress});"
+    },
+    "web3.eth.iban.createIndirect": {
+        "prefix": "web3.eth.iban.createIndirect",
+        "body": "web3.eth.iban.createIndirect(${1:jsonObj});"
+    },
+    "web3.eth.iban.isValid": {
+        "prefix": "web3.eth.iban.isValid",
+        "body": "web3.eth.iban.isValid(${1:ibanAddress});"
+    },
+    "web3.eth.iban.isDirect": {
+        "prefix": "web3.eth.iban.isDirect",
+        "body": "web3.eth.iban.isDirect(${1:ibanAddress});"
+    },
+    "web3.eth.iban.isIndirect": {
+        "prefix": "web3.eth.iban.isIndirect",
+        "body": "web3.eth.iban.isIndirect(${1:ibanAddress});"
+    },
+    "web3.eth.iban.checksum": {
+        "prefix": "web3.eth.iban.checksum",
+        "body": "web3.eth.iban.checksum(${1:ibanAddress});"
+    },
+    "web3.eth.iban.institution": {
+        "prefix": "web3.eth.iban.institution",
+        "body": "web3.eth.iban.institution(${1:ibanAddress});"
+    },
+    "web3.eth.iban.client": {
+        "prefix": "web3.eth.iban.client",
+        "body": "web3.eth.iban.client(${1:ibanAddress});"
+    },
+    "web3.eth.iban.address": {
+        "prefix": "web3.eth.iban.address",
+        "body": "web3.eth.iban.address(${1:ibanAddress})"
+    },
+    "web3.eth.iban.toString": {
+        "prefix": "web3.eth.iban.toString",
+        "body": "web3.eth.iban.toString(${1:ibanAddress});"
+    }
+}

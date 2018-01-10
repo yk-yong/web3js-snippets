@@ -2,3 +2,4 @@ node_modules
 .vsix
 test/
 .vscodeignore
+vsc-extension-quickstart.md

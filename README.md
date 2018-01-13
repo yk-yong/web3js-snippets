@@ -1,6 +1,10 @@
 # README
 
 ## Description 
-A simple snippets repo for ethereum JavaScript-API
+A simple snippets for ethereum JavaScript-API
 
-[Reference](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+
+## Demo
+![Demo gif](./assets/web3js-snippets-demo.gif)
+
+[MIT License](./License)

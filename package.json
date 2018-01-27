@@ -2,7 +2,7 @@
     "name": "web3js-snippets",
     "displayName": "Web3js Snippets",
     "description": "Snippets for web3js",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "lemon-berry",
     "engines": {
         "vscode": "^1.19.0"
@@ -28,5 +28,7 @@
     },
     "homepage": "https://github.com/yikkok-yong/web3js-snippets/",
     "license": "MIT",
-    "keywords": ["web3", "snippets"]
+    "keywords": [
+        "web3"
+    ]
 }

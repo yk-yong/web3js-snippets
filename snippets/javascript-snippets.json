@@ -73,42 +73,42 @@
     },
     "web3.reset": {
         "prefix": "web3.reset",
-        "body": "web3.reset(${0:true});",
+        "body": "web3.reset(${1:true})${0:;}",
         "description": "Should be called to reset state of web3. Resets everything except manager. Uninstalls all filters. Stops polling - returns undefined"
     },
     "web3.sha3": {
         "prefix": "web3.sha3",
-        "body": "web3.sha3(${0:string}${1:, {${2: encoding: 'hex'}}})",
+        "body": "web3.sha3(${1:string}${2:, {${3: encoding: 'hex'}}})${0:;}",
         "description": "Hash of string - returns string"
     },
     "web3.toHex": {
         "prefix": "web3.toHex",
-        "body": "web3.toHex(${0:value});",
+        "body": "web3.toHex(${1:value})${0:;}",
         "description": "Converts any value into HEX - returns string"
     },
     "web3.toAscii": {
         "prefix": "web3.toAscii",
-        "body": "web3.toAscii(${0:hexString});",
+        "body": "web3.toAscii(${1:hexString})${0:;}",
         "description": "Converts a HEX string into a ASCII string - returns string"
     },
     "web3.fromAscii": {
         "prefix": "web3.fromAscii",
-        "body": "web3.fromAscii(${0:asciiString}${1:, ${2:numberOfBytes}});",
+        "body": "web3.fromAscii(${1:asciiString}${2:, ${3:numberOfBytes}})${0:;}",
         "description": "Converts any ASCII string to a HEX string - returns string"
     },
     "web3.toDecimal": {
         "prefix": "web3.toDecimal",
-        "body": "web3.toDecimal(${0:hexString});",
+        "body": "web3.toDecimal(${1:hexString})${0:;}",
         "description": "Converts a HEX string to its number representation - returns string"
     },
     "web3.fromDecimal": {
         "prefix": "web3.fromDecimal",
-        "body": "web3.fromDecimal(${0:number});",
+        "body": "web3.fromDecimal(${1:number})${0:;}",
         "description": "Converts a number or number string to its HEX representation - returns string"
     },
     "web3.fromWei": {
         "prefix": "web3.fromWei",
-        "body": "web3.fromWei(${0:number}, ${1|'kwei','mwei','gwei','szabo','finney','ether','kether','mether','gether','tether'|});",
+        "body": "web3.fromWei(${2:number}, ${1|'kwei','mwei','gwei','szabo','finney','ether','kether','mether','gether','tether'|})${0:;}",
         "description": "Converts a number of wei into the following ethereum units - returns string|BigNumber"
     },
     "web3.toWei": {
@@ -118,23 +118,23 @@
     },
     "web3.toBigNumber": {
         "prefix": "web3.toBigNumber",
-        "body": "web3.toBigNumber(${0:numberOrHexString});",
+        "body": "web3.toBigNumber(${1:numberOrHexString})${0:;}",
         "description": "Converts a given number into a BigNumber instance - returns BigNumber"
     },
     "web3.isAddress": {
         "prefix": "web3.isAddress",
-        "body": "web3.isAddress(${0:hexString});",
+        "body": "web3.isAddress(${1:hexString})${0:;}",
         "description": "Checks if the given string is an address - returns boolean"
     },
     "web3.net.listening": {
         "prefix": "web3.net.listening",
-        "body": "web3.net.listening",
+        "body": "web3.net.listening{0:;}",
         "description": "This property is read only and says whether the node is actively listening for network connections or not - returns boolean"
     },
     "web3.net.getListening": {
         "prefix": "web3.net.getListening",
         "body": [
-            "web3.version.getListening(function (error, result) {",
+            "web3.net.getListening(function (error, result) {",
             "\t${0}",
             "});"
         ],
@@ -148,7 +148,7 @@
     "web3.net.getPeerCount": {
         "prefix": "web3.net.getPeerCount",
         "body": [
-            "web3.version.getPeerCount(function (error, result) {",
+            "web3.net.getPeerCount(function (error, result) {",
             "\t${0}",
             "});"
         ],
@@ -156,17 +156,17 @@
     },
     "web3.eth.defaultAccount": {
         "prefix": "web3.eth.defaultAccount",
-        "body": "web3.eth.defaultAccount",
+        "body": "web3.eth.defaultAccount${0:;}",
         "description": "Get default address - return string, 20 bytes. Default is undefined"
     },
     "web3.eth.defaultBlock": {
         "prefix": "web3.eth.defaultBlock",
-        "body": "web3.eth.defaultBlock",
+        "body": "web3.eth.defaultBlock${0:;}",
         "description": "Get default address - return string|number. Default is 'latest'"
     },
     "web3.eth.syncing": {
         "prefix": "web3.eth.syncing",
-        "body": "web3.eth.syncing",
+        "body": "web3.eth.syncing${0:;}",
         "description": "This property is read only and returns the either a sync object, when the node is syncing or false"
     },
     "web3.eth.getSyncing": {
@@ -189,7 +189,7 @@
     },
     "web3.eth.coinbase": {
         "prefix": "web3.eth.coinbase",
-        "body": "web3.eth.coinbase",
+        "body": "web3.eth.coinbase${0:;}",
         "description": "This property is read only and returns the coinbase address where the mining rewards go to, returns string"
     },
     "web3.eth.getCoinbase": {
@@ -203,7 +203,7 @@
     },
     "web3.eth.mining": {
         "prefix": "web3.eth.mining",
-        "body": "web3.eth.mining",
+        "body": "web3.eth.mining${0:;}",
         "description": "This property is read only and says whether the node is mining or not - returns boolean"
     },
     "web3.eth.getMining": {
@@ -217,7 +217,7 @@
     },
     "web3.eth.hashrate": {
         "prefix": "web3.eth.hashrate",
-        "body": "web3.eth.hashrate",
+        "body": "web3.eth.hashrate${0:;}",
         "description": "This property is read only and returns the number of hashes per second that the node is mining with - returns number"
     },
     "web3.eth.getHashrate": {
@@ -231,7 +231,7 @@
     },
     "web3.eth.gasPrice": {
         "prefix": "web3.eth.gasPrice",
-        "body": "web3.eth.gasPrice",
+        "body": "web3.eth.gasPrice${0:;}",
         "description": "This property is read only and returns the current gas price. The gas price is determined by the x latest blocks median gas price - return BigNumber"
     },
     "web3.eth.getGasPrice": {
@@ -245,7 +245,7 @@
     },
     "web3.eth.accounts": {
         "prefix": "web3.eth.accounts",
-        "body": "web3.eth.accounts",
+        "body": "web3.eth.accounts${0:;}",
         "description": "This property is read only and returns a list of accounts the node controls - returns array"
     },
     "web3.eth.getAccounts": {
@@ -259,7 +259,7 @@
     },
     "web3.eth.blockNumber": {
         "prefix": "web3.eth.blockNumber",
-        "body": "web3.eth.blockNumber",
+        "body": "web3.eth.blockNumber${0:;}",
         "description": "This property is read only and returns the current block number - returns number"
     },
     "web3.eth.getBlockNumber": {
@@ -391,7 +391,7 @@
     "web3.eth.call": {
         "prefix": "web3.eth.call",
         "body": [
-            "web3.eth.call(${1:callObject}${2:, ${3|blockNum,'earliest','latest','pending'|}}${3:, function(error, result) {",
+            "web3.eth.call(${1:callObject}${2:, ${3|blockNum,'earliest','latest','pending'|}}${4:, function(error, result) {",
             "\t${0}",
             "}});"
         ],
@@ -409,13 +409,13 @@
     "web3.eth.filter": {
         "prefix": "web3.eth.filter",
         "body": [
-            "web3.eth.filter(${1|'latest','pending',{object}|});"
+            "web3.eth.filter(${1|'latest','pending',{JSONobject}|})${0:;}"
         ],
         "description": "To watch for changes - returns object"
     },
     "web3.eth.contract": {
         "prefix": "web3.eth.contract",
-        "body": "web3.eth.contract(${1:abiArray});",
+        "body": "web3.eth.contract(${1:abiArray})${0:;}",
         "description": "Creates a contract object for a solidity contract, which can be used to initiate contracts on an address"
     },
     "web3.eth.getCompilers": {
@@ -429,7 +429,7 @@
     },
     "web3.eth.namereg": {
         "prefix": "web3.eth.namereg",
-        "body": "web3.eth.namereg",
+        "body": "web3.eth.namereg${0:;}",
         "description": "Returns GlobalRegistrar object"
     },
     "web3.db.putString": {
